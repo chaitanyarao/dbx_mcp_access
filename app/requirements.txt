@@ -1,0 +1,5 @@
+streamlit
+pandas
+databricks-mcp
+databricks-sdk
+mcp>=1.9

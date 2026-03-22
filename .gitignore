@@ -1,0 +1,7 @@
+.venv/
+.databricks/
+.env
+__pycache__/
+*.pyc
+assistant_live_check.py
+.streamlit/

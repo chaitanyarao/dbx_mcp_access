@@ -1,0 +1,29 @@
+command:
+  - streamlit
+  - run
+  - app.py
+  - --server.address=0.0.0.0
+  - --server.port=8000
+env:
+  - name: DATABRICKS_AUTH_MODE
+    value: workspace
+  - name: DATABRICKS_HOST
+    value: https://adb-7018564609060221.1.azuredatabricks.net
+  - name: DATABRICKS_MCP_SERVER_URL
+    value: https://adb-7018564609060221.1.azuredatabricks.net/api/2.0/mcp/sql
+  - name: DATABRICKS_SQL_WAREHOUSE_ID
+    value: 767b7290bc20efd6
+  - name: DATABRICKS_CHAT_ENDPOINT
+    value: databricks-gpt-oss-20b
+  - name: DATABRICKS_CATALOG
+    value: cmidev
+  - name: DATABRICKS_SCHEMA
+    value: telematics_primary
+  - name: DATABRICKS_TABLE
+    value: telematics_master_hb_e
+  - name: QUERY_ROW_LIMIT
+    value: "100"
+  - name: QUERY_TIMEOUT_SECONDS
+    value: "60"
+  - name: OUTPUT_FORMAT
+    value: text

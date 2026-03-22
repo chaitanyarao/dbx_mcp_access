@@ -1,0 +1,22 @@
+bundle:
+  name: dbx-mcp-assistant
+
+variables:
+  app_name:
+    description: Databricks App name for the Unity Catalog MCP assistant.
+    default: unity-catalog-mcp-assistant
+
+resources:
+  apps:
+    unity_catalog_mcp_assistant:
+      name: ${var.app_name}
+      description: Streamlit assistant for asking questions about Unity Catalog tables through Databricks SQL MCP.
+      source_code_path: ./app
+      compute_size: MEDIUM
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7018564609060221.1.azuredatabricks.net
